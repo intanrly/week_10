@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Praktikum Week 9 Algoritma Pemrograman 2</h1>
+    {{ content|safe }}
+    <img src="{{ url_for('static', filename='bg.jpg') }}" alt="bg">
+    <img src="{{ url_for('static', filename='moon.png') }}" alt="moon">
+    <img src="{{ url_for('static', filename='mountain.png') }}" alt="mountain">
+    <img src="{{ url_for('static', filename='road.png') }}" alt="road">
+</body>
+</html>

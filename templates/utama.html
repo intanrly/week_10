@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo|Oswald">
+</head>
+<style>
+  :root{
+  --color: #333; 
+  }
+
+  body {
+    font-family: 'Red Hat Text', sans-serif;
+  }
+
+  .container {
+    text-align: center;
+    color: var(--color);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+
+  p {
+    max-width: 52ch;
+    line-height: 1.5;
+    padding: 1em;
+  }
+
+  a {
+    display: inline-block;
+    padding: 1em 3.5em;
+    background-color: var(--color);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.3em;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: .875rem;
+  }
+
+  .blank,
+  .other {
+    width: 100%;
+    min-height: 40vh;
+    background-color: var(--color);
+  }
+
+  .second {
+    background-image:url(https://images.unsplash.com/photo-1514496959998-c01c40915c5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+    background-attachment: fixed;
+    height: 1200px;
+  }
+
+  .third {
+    background-image: url("{{ url_for('static', filename='moun.jpg') }}");
+    background-attachment: fixed;
+    height: 1200px;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-top: 1em;
+  }
+
+  .card > a {
+    margin-bottom: 2em;
+  }
+
+  .item {
+    display: flex;
+    max-width: 320px;
+    background-color: white;;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .5em;
+    -webkit-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+    box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+  }
+
+  .img {
+    width: 90%;
+    height: 200px;
+    background-color: lightgrey;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+    border-radius: .3em;;
+  }
+
+  .img-first {
+    background-image: url("{{ url_for('static', filename='tiga.jpg') }}");
+  }
+
+  .img-second {
+    background-image: url("{{ url_for('static', filename='satu.jpg') }}");
+  }
+
+  .img-third {
+    background-image: url("{{ url_for('static', filename='dua.jpg') }}");
+  }
+
+  .img-forth {
+    background-image: url("{{ url_for('static', filename='empat.jpg') }}");
+  }
+
+  .img-satu {
+    background-image: url("{{ url_for('static', filename='enam.jpg') }}");
+  }
+
+  .img-dua {
+    background-image: url("{{ url_for('static', filename='tujuh.jpg') }}");
+  }
+
+  .img-tiga {
+    background-image: url("{{ url_for('static', filename='delapan.jpg') }}");
+  }
+
+  .second {
+    flex-direction: row;
+    gap: 1.6em;
+  }
+
+  .third {
+    flex-direction: row;
+    gap: 1.6em;
+  }
+
+  h5 {
+    font-family:'Oswald', sans-serif; 
+    font-size:28px; 
+    font-weight:400; 
+    text-transform: uppercase;
+    text-align: center;
+    color: aliceblue;
+  }
+
+  .blank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+</style>
+<div class="container">
+  <h1>Algoritma Pemrograman 2</h1>
+  <p>Python Web Programming Flask</p>
+  <a>Praktikum Week 10</a>
+</div>
+
+<div class="blank">
+  <h5>Intan</h5>
+</div>
+
+<div class="container second">
+  <div class="item">
+    <div class="img img-first"></div>
+    <div class="card">
+      <h3>Biodata Diri</h3>
+      <p>Halaman ini berisi biodata diri dari penulis</p>
+      <a href="http://localhost:5000/biodata/">Buka</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="img img-second"></div>
+    <div class="card">
+      <h3>CV</h3>
+      <p>Halaman ini berisi curriculum vitae dari penulis</p>
+      <a href="http://localhost:5000/cv/">Buka</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="img img-third"></div>
+    <div class="card">
+      <h3>Gallery</h3>
+      <p>Halaman ini berisi kumpulan memori dari penulis</p>
+      <a href="http://localhost:5000/gallery/">Buka</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="img img-forth"></div>
+    <div class="card">
+      <h3>Movies</h3>
+      <p>Halaman ini berisi rekomendasi film yang disukai penulis</p>
+      <a href="http://localhost:5000/movies/">Buka</a>
+    </div>
+  </div>
+</div>
+
+<div class="blank">
+  <h5>Nurul</h5>
+</div>
+
+<div class="container third">
+  <div class="item">
+    <div class="img img-satu"></div>
+    <div class="card">
+      <h3>Fibonacci</h3>
+      <p>Halaman ini berisi halaman untuk menghitung deret fibonacci</p>
+      <a href="http://localhost:5000/fibonacci/">Buka</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="img img-dua"></div>
+    <div class="card">
+      <h3>Get Data</h3>
+      <p>Halaman ini berisi halaman untuk mendapatkan data dalam bentuk tabel</p>
+      <a href="http://localhost:5000/get/">Buka</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="img img-tiga"></div>
+    <div class="card">
+      <h3>Post Data</h3>
+      <p>Halaman ini berisi halaman untuk memasukkan data ke tabel</p>
+      <a href="http://localhost:5000/postdata">Buka</a>
+    </div>
+  </div>
+</div>
+
+<div class="blank">
+  <h5>Laily</h5>
+</div>
+
+</html>

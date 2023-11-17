@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sintony">
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #222;
+        padding: 0;
+        margin: 0;
+        font-family: 'Sintony', sans-serif;
+        font-weight: 300;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #000;
+    }
+
+    header {
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+    }
+
+    .section {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        letter-spacing: 4px;
+        overflow: hidden;
+        clip: rect(0, auto, auto, 0);
+        .fixed {
+            overflow: hidden;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            
+        }
+        .white {
+            color: #fff;
+        }
+    }
+
+    @for $i from 1 through 10 {
+        .section:nth-child(#{$i}) {
+            @if($i==1) {
+                background-color: #fff;
+                color: #000;
+                top: 0;
+            }
+            @else if($i==10) {
+                background-color: #000;
+                color: #fff;
+                top: (100vh * ($i - 1));
+            }
+            @else {
+                box-shadow: inset 0 1px 80px rgba(0, 0, 0, 0.14);
+                background-color: hsl(200deg * $i, 90%, 40%);
+                color: #fff;
+                top: (100vh * ($i - 1));
+            }
+            z-index: ($i);
+            .fixed {
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    .oop {
+        position: relative;
+        z-index: auto;
+        height: 10px;
+        background: linear-gradient(141deg, #48ded4 0%, #a026bf 51%, #e82c75 75%);
+    }
+  </style>
+</head>
+<section class="oop fixed">
+    <h1 class="large">Parallax Background</h1>
+    <p>No JavaScript, Start scrolling</p>
+</section>
+
+<section class="fixed">
+    <h1>The Day My Mother Forgot to Cry</h1>
+    <p>
+        I shudder to recall that dreadful Diwali night of October 2007, when my mother knocked our bedroom at the dead of the night enquiring where the toilet was. She looked disoriented and totally confused. Unable to understand the cause for her abnormal behaviour, we thought she was still in a semi-sleep state and showed her the toilet. But even after coming out of the toilet she was unable to find her way to her bedroom.
+    </p>
+</section>
+
+<section class="p fixed">
+    <p>
+        Sensing that something is seriously amiss, we took her the next day to the nearby nursing home for diagnosis and treatment. She was immediately referred to a neurosurgeon and after an MRI scan it was confirmed that she suffered a brain stroke. The report showed certain grey patches which the doctor referred to as clots have affected her memory totally. The doctor informed that the memory loss is irreversible due to her old age. He, however, assured that further damage to the brain can be arrested with drugs.
+    </p>
+</section>
+
+<section class="p fixed">
+    <p>
+        That was the beginning of the slow end for my mother. As the disease got worse, she forgot everything. Lost control of her body functions and finally, failed to recognize anyone except my wife who used to take care of her like a mother taking care of her baby. She used to feed her, change her diapers, dress her, give her a bath, brush her hair, and also help her to sleep.
+    </p>
+</section>
+
+<section class="p fixed">
+    <p>
+        For my wife and me, she was like a little child. Our world revolved around her. We used to play with her, tease her. We even celebrated her 80th birthday with a grand cake cutting ceremony attended by my wife’s friends in Kolkata. It was a moment of happiness for her as she kept smiling at everyone greeting her on her birthday without knowing whose birthday it was. So when one of the guests greeted her with a "wish you a happy birthday", she promptly responded by wishing her the same!
+    </p>
+</section>
+
+<section class="p fixed">
+    <p>
+        It was interesting to know that even after destroying her brain cells, the disease could not take away the basic courtesies from her, acquired during her training as a Telephone Operator long long ago. They remained entrenched in her till her last breath. She never forgot to express her sincere thanks whenever we helped her with little things.
+    </p>
+</section>
+
+<section class="p fixed">
+    <p>
+        The thud sound of a body hitting the ground rudely awakened us. We looked around to find my mother missing from her bed. In a swift motion my wife jumped from the bed and dashed out of the room to find her lying flat, face down on the floor motionless. Her forehead was badly injured. She was bleeding profusely from her lips due to the impact of the fall. But there was virtually no reaction from her. We physically lifted her and put her on the bed. My wife gently cleansed the wound and enquired whether it was hurting. She replied in the affirmative. But there was no sign of pain on her face. No tears in her eyes. Just plain disoriented look, devoid of any feelings and emotions. The disease took away all her emotional feelings and also dried up the tear glands. Looking at her state, I cried silently.
+    </p>
+</section>
+
+<section class="p fixed">
+    <p>
+        Oh God! I said to myself. Is this my mother, who used to get tears in her eyes even for a faint discomfort? She was emotionally so sensitive that even a stern look would bring her to tears. Such was her reputation for crying that my father used to tease her by calling her "Gangadhari" - Lady wearing river Ganges on her head.
+    </p>
+</section>
+
+<section class="p fixed">
+    <p>
+        The day she passed away and as her body was being carried in a "Hearse" van, there were unexpected showers for a few minutes as if the heavens have cried for her, as she forgot to cry.
+    </p>
+</section>
+
+<section class="p fixed white">
+    <p>Thanks for watching</p>
+</section>
+</html>

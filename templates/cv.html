@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo|Oswald">
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Arimo', sans-serif;
+    }
+
+    section:first-child{
+        position: relative;
+        height:100px;
+    }
+
+    section .title{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top:-35.5px;
+        margin-left: -196.4px;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 10px;
+    }
+
+    .title h1,h2{
+        font-family:'Oswald', sans-serif; 
+        font-size:28px; 
+        font-weight:400; 
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .title h2{
+        font-size:20px;
+        font-weight:100;
+        letter-spacing: 5px;
+        margin-left: 13px;
+        text-align: center;
+    }
+    
+    .p-one{
+        background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("{{ url_for('static', filename='enam.jpg') }}"); 
+    }
+    .p-two{
+        background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("{{ url_for('static', filename='delapan.jpg') }}");
+    }
+    .p-three{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("{{ url_for('static', filename='tujuh.jpg') }}");
+    }
+    .p-four{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("{{ url_for('static', filename='lima.jpg') }}");
+    }
+
+    .parallax-inner{
+        position:relative;
+        min-height: 500px;
+        background-position: top center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .parallax-inner > h2{
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -20.5px;
+        width: 100%;
+        text-align: center;
+    }
+    .content-text p{
+        padding: 25px 50px 25px 50px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 24px;
+    }
+    .first-letter{
+        float: left;
+        font-weight: 400;
+        font-size: 84px;
+        line-height: 64px;
+        padding-top: 2px;
+        padding-right: 8px;
+        padding-left: 4px;
+        text-align: justify;
+    }
+    .line-break{
+        border-bottom: 1px solid #bf2d33;
+        width: 200px;
+        margin: 0 auto;
+    }
+    .red{
+        color: #5e5a58;
+    }
+    .darkgreen{
+        color:#0d2100;
+    }
+    .green{
+        color:#6b6837;
+    }
+    .skyblue{
+        color: #5c9cbf;
+    }
+    footer{
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+    footer > p{
+        text-transform: capitalize;
+        width:460px;
+        margin:0 auto;
+        font-size: 27px;
+    }
+
+    @media screen and (max-width:500px){
+        .parallax-inner{
+            min-height: 350px;
+            background-size: cover;
+    }
+    footer{
+        padding: 10px;
+    }
+    footer > p{
+        width: 100%;
+        font-size: 24px;
+    }
+    }
+
+</style>
+<div id="parallax-wrapper">
+  <section>
+    <div class="title">
+      <hgroup>
+      <h1>Intan Nurul Laily</h1>
+      <h2>Curriculum Vitae</h2> 
+      </hgroup>
+    </div>
+  </section>
+  
+  <section>
+    <div class="p-one parallax-inner">
+      <h2>Intan</h2>
+    </div>
+  </section>
+  <section>
+    <div class="content-text">
+      <p><span class="first-letter red">S</span>
+        eorang mahasiswa yang tertarik dengan analisis data dan juga memiliki ketertarikan untuk mempunyai
+        bisnis yang saya kembangkan sendiri. Saya ingin menjadi seorang wanita muda yang sukses dan unggul pada analisis data 
+        bisnis. Saya juga memiliki bisnis kecil sendiri yang dirintis sejak Juni 2020 dan masih terus berkembang hingga saat ini.</p>
+      <div class="line-break"></div>
+      <p>Hard Skills: Microsoft Office, Python, R-Studio</p>
+      <p>Soft Skills: Kerja Sama, Manajemen Waktu, Disiplin, Jujur, Bertanggung Jawab, Kemauan Belajar Tinggi</p>
+    </div>
+  </section>
+ 
+  <section>
+    <div class="p-two parallax-inner">
+      <h2>Nurul</h2>
+    </div>
+  </section>
+  <section>
+    <div class="content-text">
+      <p><span class="first-letter darkgreen"></span>
+    Riwayat Pendidikan</p>
+      <div class="line-break"></div>
+      <p>IPA | SMAN 1 Surabaya</p>
+      <p>Teknologi Sains Data | Universitas Airlangga</p>
+    </div>
+  </section>
+  
+  <section>
+    <div class="p-three parallax-inner">
+      <h2>Laily</h2>
+    </div>
+  </section>
+  <section>
+    <div class="content-text">
+      <p><span class="first-letter green"></span>
+      Pengalaman Organisasi dan Kepanitiaan</p>
+      <div class="line-break"></div>
+        <p>Bendahara | OSIS SMAN 1 Surabaya</p>
+        <p>PSDM | HIMATESDA Universitas Airlangga</p>
+        <p>Koordinator Liaison Officer | INVALESCO 2K21</p>
+        <p>Sekretaris | BINARY 3.0 Teknologi Sains Data</p>
+        <p>Humas | SYNREACH 2023</p>
+    </div>
+  </section>
+  <section>
+    <div class="p-four parallax-inner">
+      <h2>164221060</h2>
+    </div>
+  </section>
+    
+  
+</div>
+
+</html>
